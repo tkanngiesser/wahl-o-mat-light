@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wahl-O-Mat Light</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
             background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h2 {
             text-align: center;
+            margin-bottom: 20px;
         }
         select, button {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
+            margin: 10px 0;
         }
         button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
+            width: 100%;
         }
         p#result {
             font-weight: bold;
             text-align: center;
+            margin-top: 20px;
         }
     </style>
     <script>
@@ -52,46 +51,226 @@
     </script>
 </head>
 <body>
-    <h2>Wahl-O-Mat Light</h2>
-    <form id="bulletForm">
+    <div class="container">
+        <h2>Wahl-O-Mat Light</h2>
+        <form id="bulletForm">
 
-        <h3>Wirtschaft & Steuern</h3>
-        <label>Steuerlast für Bürger und Unternehmen senken</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Soli vollständig abschaffen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Unternehmenssteuern auf maximal 25 % begrenzen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Bürokratie massiv abbauen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Nationales Lieferkettengesetz abschaffen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
+            <h3>Wirtschaft & Steuern</h3>
+            <div class="form-group">
+                <label>Steuerlast für Bürger und Unternehmen senken</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Soli vollständig abschaffen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Unternehmenssteuern auf maximal 25 % begrenzen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Bürokratie massiv abbauen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Nationales Lieferkettengesetz abschaffen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
 
-        <h3>Arbeit & Soziales</h3>
-        <label>Sozialversicherungsbeiträge auf 40 % senken</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Überstundenzuschläge für Vollzeitarbeit steuerfrei stellen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Wöchentliche statt tägliche Höchstarbeitszeit einführen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Bürgergeld abschaffen und durch eine Grundsicherung ersetzen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Steuerfreier Zuverdienst bis 2.000 € für Rentner</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Rentner von der Steuererklärungspflicht befreien</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Frühzeitige private Altersvorsorge staatlich fördern</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
+            <h3>Arbeit & Soziales</h3>
+            <div class="form-group">
+                <label>Sozialversicherungsbeiträge auf 40 % senken</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Überstundenzuschläge für Vollzeitarbeit steuerfrei stellen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Wöchentliche statt tägliche Höchstarbeitszeit einführen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Bürgergeld abschaffen und durch eine Grundsicherung ersetzen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Steuerfreier Zuverdienst bis 2.000 € für Rentner</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Rentner von der Steuererklärungspflicht befreien</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Frühzeitige private Altersvorsorge staatlich fördern</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
 
-        <h3>Energie & Klima</h3>
-        <label>Stromsteuer und Netzentgelte senken</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Ausbau erneuerbarer Energien beschleunigen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Kernkraft als Option erhalten</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Heizungsgesetz der Ampel abschaffen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Emissionshandel als Hauptinstrument für Klimaschutz nutzen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
+            <h3>Energie & Klima</h3>
+            <div class="form-group">
+                <label>Stromsteuer und Netzentgelte senken</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Ausbau erneuerbarer Energien beschleunigen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Kernkraft als Option erhalten</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Heizungsgesetz der Ampel abschaffen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Emissionshandel als Hauptinstrument für Klimaschutz nutzen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
 
-        <h3>Innovation & Digitalisierung</h3>
-        <label>Forschung und Entwicklung sollen 3,5 % des BIP ausmachen</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Deutschland braucht ein eigenes Bundesdigitalministerium</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Startups sollen in der Gründungsphase von Bürokratie befreit werden</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Datenschutz soll flexibler gestaltet werden, um Innovationen zu fördern</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Künstliche Intelligenz und Cloud-Technologien sollen ausgebaut werden</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
+            <h3>Innovation & Digitalisierung</h3>
+            <div class="form-group">
+                <label>Forschung und Entwicklung sollen 3,5 % des BIP ausmachen</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Deutschland braucht ein eigenes Bundesdigitalministerium</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Startups sollen in der Gründungsphase von Bürokratie befreit werden</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Datenschutz soll flexibler gestaltet werden, um Innovationen zu fördern</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Künstliche Intelligenz und Cloud-Technologien sollen ausgebaut werden</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
 
-        <h3>Migration & Sicherheit</h3>
-        <label>Illegale Migration muss gestoppt werden</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Grenzen sollen wieder kontrolliert und illegale Migranten zurückgewiesen werden</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
-        <label>Asylverfahren und Abschiebungen sollen beschleunigt werden</label><select><option value="1">Ich stimme zu</option><option value="0" selected>Neutral</option><option value="-1">Ich stimme nicht zu</option></select>
+            <h3>Migration & Sicherheit</h3>
+            <div class="form-group">
+                <label>Illegale Migration muss gestoppt werden</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Grenzen sollen wieder kontrolliert und illegale Migranten zurückgewiesen werden</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Asylverfahren und Abschiebungen sollen beschleunigt werden</label>
+                <select class="form-control">
+                    <option value="1">Ich stimme zu</option>
+                    <option value="0" selected>Neutral</option>
+                    <option value="-1">Ich stimme nicht zu</option>
+                </select>
+            </div>
 
-        <button type="button" onclick="calculateAgreement()">Berechnen</button>
-    </form>
-    <p id="result"></p>
+            <button type="button" class="btn btn-primary" onclick="calculateAgreement()">Berechnen</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
